@@ -38,12 +38,12 @@ function delay(ms) {
 }
 
 async function getApple() {
-  await delay(1000); // 1sec
+  await delay(2000);
   return "apple";
 }
 
 async function getBanana() {
-  await delay(1000); // 1sec
+  await delay(1000);
   return "banana";
 }
 
@@ -53,7 +53,7 @@ async function pickFruits() {
   return `${apple} + ${banana}`;
 }
 
-pickFruits().then(console.log); // 2sec
+pickFruits().then(console.log);
 ```
 <br/>
 
@@ -67,7 +67,7 @@ async function pickFruits() {
   return `${apple} + ${banana}`;
 }
 
-pickFruits().then(console.log); // 1sec
+pickFruits().then(console.log);
 ```
 <br/>
 <hr/>
@@ -80,7 +80,7 @@ function pickAllFruits() {
   .then(fruits => fruits.join(" + "));
 }
 
-pickAllFruits().then(console.log);
+pickAllFruits().then(console.log); // apple + banana
 ```
 <br/>
 
@@ -90,7 +90,7 @@ function pickOnlyOne() {
   return Promise.race([getApple(), getBanana()])
 }
 
-pickOnlyOne().then(console.log);
+pickOnlyOne().then(console.log); // banana
 ```
 <br/>
 
