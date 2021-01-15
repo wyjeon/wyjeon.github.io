@@ -1,6 +1,6 @@
 ---
 layout: post
-title: temp
+title: async, await
 tags: [JS, Callback]
 ---
 ## 1. async
@@ -70,6 +70,7 @@ async function pickFruits() {
 pickFruits().then(console.log); // 1sec
 ```
 <br/>
+<hr/>
 
 ## 3. Useful Promise APIs
 Promise.all()
